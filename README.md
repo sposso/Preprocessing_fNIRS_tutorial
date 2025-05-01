@@ -19,7 +19,7 @@ The preprocessing pipeline presented here  was implemented in the original [pape
 2. **Scalp Coupling Index (SCI)**: The scalp coupling index value is calculated and used to identify optodes that were not well connected to the scalp. The scalp coupling threshold value was used to remove channels with a rejection criterion of < 0.8.
 3. **Motion artifact correction**: Motion artifact is then removed using Temporal Derivative Distribution Re-pair (TDDR), which is applied to all channels.
 4. **Short-channel regression**: Short-separation channel data are then subtracted from the standard long-separation channel signal to remove the inﬂuence from local non-cortical changes in blood oxygenation.
-5. ** Convert to hemoglobin concentrations **:  The signal is then transformed to oxy (HbO) and deoxyhemoglobin (HbR)  using the modiﬁed Beer-Lambert Law.
+5. **Convert to hemoglobin concentrations**:  The signal is then transformed to oxy (HbO) and deoxyhemoglobin (HbR)  using the modiﬁed Beer-Lambert Law.
 6. **Band-pass filtering**: Filtering was applied to the signal (0.02-0.4 Hz) to remove slow drifts in the signal and components related to heart rate.
 7. **Signal enhancement**: The signal enhancement method introduced [here](https://pubmed.ncbi.nlm.nih.gov/19945536)  is applied.
 8. **Epoch extraction**: Epochs corresponding to the onset and 18 s after stimulus onset were extracted.
