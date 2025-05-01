@@ -13,7 +13,8 @@ You can download the dataset using the [MNE-NRIS](https://mne.tools/mne-nirs/sta
 
 ## Preprocessing pipeline 
 
-The preprocessing pipeline presented here  was implemented in the original [paper](https://www.sciencedirect.com/science/article/pii/S0378595521000903?via%3Dihub), where the data was released and consists of the following: 
+
+This pipeline replicates the procedures described in the original [publication](https://www.sciencedirect.com/science/article/pii/S0378595521000903?via%3Dihub). The steps include:
 
 1. Convert raw intensity signals to optical density.
 2. **Scalp Coupling Index (SCI)**: The scalp coupling index value is calculated and used to identify optodes that were not well connected to the scalp. The scalp coupling threshold value was used to remove channels with a rejection criterion of < 0.8.
