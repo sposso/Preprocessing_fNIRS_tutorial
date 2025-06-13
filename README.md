@@ -17,12 +17,12 @@ You can download the dataset using the [MNE-NRIS](https://mne.tools/mne-nirs/sta
 This pipeline replicates the procedures described in the original [publication](https://www.sciencedirect.com/science/article/pii/S0378595521000903?via%3Dihub). The steps include:
 
 1. Convert raw intensity signals to optical density.
-2. **Scalp Coupling Index (SCI)**: The scalp coupling index value is calculated and used to identify optodes that were not well connected to the scalp. The scalp coupling threshold value was used to remove channels with a rejection criterion of < 0.8.
+2. **Scalp Coupling Index (SCI)**: The scalp coupling index value is calculated and used to identify optodes that were not well connected to the scalp. The scalp coupling threshold value       was used to remove channels with a rejection criterion of < 0.8.
 3. **Motion artifact correction**: Motion artifact is then removed using Temporal Derivative Distribution Re-pair (TDDR), which is applied to all channels.
-4. **Short-channel regression**: Short-separation channel data are then subtracted from the standard long-separation channel signal to remove the inﬂuence from local non-cortical changes in blood oxygenation.
+4. **Short-channel regression**: Short-separation channel data are then subtracted from the standard long-separation channel signal to remove the inﬂuence from local non-cortical changes       in blood oxygenation.
 5. **Convert to hemoglobin concentrations**:  The signal is then transformed to oxy (HbO) and deoxyhemoglobin (HbR)  using the modiﬁed Beer-Lambert Law.
 6. **Band-pass filtering**: Filtering was applied to the signal (0.02-0.4 Hz) to remove slow drifts in the signal and components related to heart rate.
-7. **Signal enhancement**: The signal enhancement method introduced [here](https://pubmed.ncbi.nlm.nih.gov/19945536)  is applied.
+7. **Signal enhancement**: The signal was then enhanced using a [correlation-based signal improvement method](https://pubmed.ncbi.nlm.nih.gov/19945536) to reduce head motion noise and          improve signal quality.
 8. **Epoch extraction**: Epochs corresponding to the onset and 18 s after stimulus onset were extracted.
 9. **Epoch rejection**: An epoch rejection criterion is employed to exclude any individual epochs with a peak-to-peak value exceeding 100 μM
 
